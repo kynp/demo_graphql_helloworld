@@ -4,7 +4,7 @@ Simple API project with GraphQL.
 assume you have standard program about `nodejs` and `git`
 1. clone this project with command: 
 ```git
-git clone <repo>
+git clone https://github.com/ChimengSoso/demo_graphql_helloworld.git
 ```
 2. install dependencies with command:
 ```node
