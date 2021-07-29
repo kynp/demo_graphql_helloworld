@@ -35,7 +35,7 @@ type Subscription {
 }
 ```
 The Request and Response show in below table.
-<table>
+<table align="left">
 <tr>
   <th> No. </th>
   <th> Query / Mutaion </th>
