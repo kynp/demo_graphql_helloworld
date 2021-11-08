@@ -1,6 +1,6 @@
 const { GraphQLServer, PubSub } = require('graphql-yoga');
 
-let defaultName = "Chi";
+let defaultName = "Meow";
 
 const pubsub = new PubSub();
 
@@ -8,6 +8,7 @@ const typeDefs = `
 	type Query {
 		hello(name: String): String!
 		sayhi: String!
+		meow(name: String): String!
 	}
 
 	type Mutation {
@@ -24,9 +25,14 @@ const resolvers = {
 		hello: (root, { name }, ctx, info) => {
 			if (!name)
 				name = defaultName;
-			return `Hello World from ${name}!`;
+			return `Meow meow from ${name}!`;
 		},
-		sayhi: () => "Hi API from graphQL"
+		sayhi: () => "Hi API from graphQL",
+		meow: (root, { name }, ctx, info) => {
+			if (!name)
+				name = defaultName;
+			return `Give ${name} a fish!`;
+		}
 	},
 	Mutation: {
 		changeDefaultName: (root, { name }, ctx, info) => {
